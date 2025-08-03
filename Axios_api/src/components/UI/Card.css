@@ -1,0 +1,102 @@
+/* Card Container Styling */
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 3 in a row, responsive */
+  gap: 2rem;
+  padding: 0;
+  margin: 2rem 0;
+  list-style: none;
+}
+
+/* Individual Card */
+.card {
+  background-color: #1c1c1c;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Inner Card Layout */
+.card__container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image Styling */
+.card__image-wrapper {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  background-color: #111;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text and Actions */
+.card__details {
+  padding: 1.5rem;
+  color: #f0f0f0;
+}
+
+.card__title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+}
+
+.card__year {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.card__actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Links and Button */
+.card__link {
+  color: #00bfff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card__link:hover {
+  text-decoration: underline;
+}
+
+.ticket__buy-btn {
+  background-color: #ff4757;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.ticket__buy-btn:hover {
+  background-color: #e84118;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card__image-wrapper {
+    height: 250px;
+  }
+}
+
+  
